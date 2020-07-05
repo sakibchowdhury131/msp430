@@ -5,7 +5,7 @@ void main(void)
   WDTCTL = WDTPW + WDTHOLD;     // Stop WDT
   CCTL0 = CCIE;                             // CCR0 interrupt enabled
   TACTL = TASSEL_2 + MC_1 + ID_3;           // SMCLK/8, upmode
-  CCR0 =  10000;                     // 12.5 Hz
+  CCR0 =  5000;                     // changing frequency
   P1OUT &= 0x00;               // Shut down everything
   P1DIR &= 0x00;
   P1DIR |= BIT0 + BIT6;            // P1.0 and P1.6 pins output the rest are input
